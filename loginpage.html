@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+</head>
+
+<body>
+
+    <div class="login-box">
+        <h2>LOGIN PAGE</h2>
+
+        <div class="input-group">
+            <label>Username</label>
+            <input type="text" id="username" placeholder="Enter username">
+        </div>
+    
+
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+        </div>
+
+        <button class="login-btn" onclick="login()">Login</button>
+
+        <div id="error" class="error"></div>
+
+        
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const error = document.getElementById("error");
+
+            if (username === "" || password === "") {
+                error.textContent = "Please fill in all fields";
+            } else {
+                error.textContent = "";
+                alert("Login successful!");
+            }
+        }
+    </script>
+
+</body>
+</html>
